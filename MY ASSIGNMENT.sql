@@ -1,0 +1,133 @@
+-->PRINT EMPLOYEES WHO ARE ALL GETTING SALARY 24000 AND THEY MUST BR UNDER THE DEPARTMENT 90
+SELECT FIRST_NAME, LAST_NAME, SALARY, DEPARTMENT_ID
+FROM EMPLOYEES
+WHERE SALARY = 24000 AND DEPARTMENT_ID = 90;
+
+--------------------------------------------------------------------------------
+-->PRINT EMPLOYEES WHOSE MANAGER_ID IS 100 ALSO PRINT ALL EMPLOYEES WITH JOB_ID IT_PROG
+SELECT * 
+FROM employees
+WHERE manager_id = 100 OR job_id = 'IT_PROG';
+
+-----------------------------------------------------------------------------------
+-->FROM CLAUSE
+SELECT FIRST_NAME, LAST_NAME, EMPLOYEE_ID, SALARY
+FROM EMPLOYEES;
+
+---------------------------------------------------------------------------------
+-->ROW WISE FILTER
+SELECT * 
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE '%s';
+
+----------------------------------------------------------------------------------
+-->LOGICAL OPERATIONS
+1.AND
+2.OR
+3.NOT
+4.IN
+5.BETWEEN
+6.LIKE
+7.NULL/NOT NULL
+
+SELECT *
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = 10 AND SALARY < 8000;
+
+---------------------------------------------------------------------------------
+-->PRINT EMPLOYEEID FIRSTNAME LAST NASME AND SALARY GETTING SALARY GREATER THAN 15000 BELONGING TO DPT 90
+AND WITH THEIR FIRST NAME STARTING WITH LETTER 'N'
+
+SELECT FIRST_NAME, LAST_NAME, SALARY
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = 90 AND SALARY > 15000 AND FIRST_NAME LIKE 'N%';
+
+----------------------------------------------------------------------------------------
+-->PRINT EMPLOYEEID FIRSTNAME LAST NAME AND SALARY GETTING SALARY GREATER THAN 15000 BELONGING TO DPT 90
+AND WITH THEIR FIRST NAME STARTING WITH LETTER 'N' ,WHERE THE MANAGER ID IS NOT NULL
+SELECT FIRST_NAME, LAST_NAME, SALARY
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = 90 AND SALARY >15000 AND FIRST_NAME LIKE 'N%' AND MANAGER_ID IS NOT NULL;
+
+----------------------------------------------------------------------------------------------------------
+-->PRINT ALL THE NULL VALUES FROM COMMISSION_PCT CIOLUMN FROM EMPLOYEES TABLE
+SELECT * 
+FROM EMPLOYEES
+WHERE COMMISSION_PCT NULL;
+
+-----------------------------------------------------------------------------------------------------------
+-->PRINT ALL THE COLUMNS WHERE EITHER DEPT ID IS NULL OR MANAGER ID IS NULL
+AND THEIR NAME MUST END WITH 'n' AND SAALRY MUST BE GREATER THAN OR EQUAL TO 10000
+AND WHERE THE COMMISSION_PCT IS NULL
+SELECT *
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE '%n' AND (DEPARTMENT_ID IS NULL OR MANAGER_ID IS NULL) AND SALARY >= 10000;
+
+------------------------------------------------------------------------------------------------------------
+-->PRINT ALL THE COLUMNS WHERE EITHER DEPT ID IS NULL OR MANAGER ID IS NULL AND THEIR NAME MUST END WITH 'n' AND SAALRY MUST BE GREATER THAN OR EQUAL TO 10000 AND WHERE THE COMMISSION_PCT IS NULL
+SELECT FIRST_NAME, LAST_NAME, SALARY, EMPLOYEE_ID
+FROM EMPLOYEES
+WHERE SALARY > 15000 AND DEPARTMENT_ID = 90 AND FIRST_NAME LIKE 'N%' AND MANAGER_ID IS NOT NULL;
+
+------------------------------------------------------------------------------------
+-->COMMISSION_PCT NULL
+SELECT FIRST_NAME, LAST_NAME 
+FROM EMPLOYEES
+WHERE COMMISSION_PCT IS NULL;
+  
+------------------------------------------------------------------------------------
+-->RECEIVING THE SALARY < 24000 AND THEY MUST BE UNDER THE DEPARTMENT 90
+SELECT FIRST_NAME, LAST_NAME, SALARY
+FROM EMPLOYEES
+WHERE SALARY < 24000 AND DEPARTMENT_ID = 90;
+
+-------------------------------------------------------------------------------------
+-->PRINT ALL THE UNIQUE DEPARTMENTS WHOSE MANAGERID ID IS NULL AND JOB_ID 'AD_VP
+SELECT DISTINCT DEPARTMENT_ID
+FROM EMPLOYEES
+WHERE MANAGER_ID IS NOT NULL AND JOB_ID = 'AD_VP';
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
