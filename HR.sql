@@ -1,0 +1,1 @@
+select first_name ||' '||employee_id  from employees;
