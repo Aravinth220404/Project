@@ -1,1 +1,18 @@
+-->Employee details query
+select employee_id, first_name, last_name, department, hire_date
+from employees;
 
+-->Employee count by department
+select department, COUNT(employee_id) AS total_employees
+from employees
+group by department;
+
+-->Average salary by department
+select department, avg(salary) as avg_salary
+from employees
+group by department;
+
+-->Employees with Specific job titles
+select first_name, last_name, job_title
+from employees
+where job_title = 'Software Engineer';
